@@ -1,0 +1,7 @@
+{
+  "name": "baniElNoor",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
