@@ -11,7 +11,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <!-- <ion-list>
     <ion-list-header>
       <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
     </ion-list-header>
@@ -26,7 +26,27 @@
     </ion-item>
 
 
-  </ion-list>
+  </ion-list> -->
 
+  <ion-list>
+    <ion-list-header>
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    </ion-list-header>
+    <ion-item-sliding *ngFor="let oneMakhdoum of makhdouminList" (click)="passDetailOfMakhdoum(oneMakhdoum)">
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/avatar.png">
+        </ion-avatar>
+        <h2>{{ oneMakhdoum.name }}</h2>
+      </ion-item>
+
+      <ion-item-options side="right">
+        <button ion-button color="secondary">
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 
 </ion-content>
