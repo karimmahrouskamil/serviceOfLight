@@ -43,6 +43,19 @@ export class MakhdominServiceProvider {
         FatherOfConfess: "fr youseef Angelos",
         servantFollowing: "Ossama samir",
         ChomosyaLevel: ChamasLevel.ebsaltos
+      },
+      {
+        name: "Ayman",
+        phone: 123123,
+        zone: "B",
+        street: "Daher",
+        numberOfBuilding: 4,
+        flatNumber: 5,
+        HomePhone: 213,
+        Birthdate: new Date(),
+        FatherOfConfess: "fr youseef Angelos",
+        servantFollowing: "Ossama samir",
+        ChomosyaLevel: ChamasLevel.ebsaltos
       }
     ];
     this.makhdouminList = data;
