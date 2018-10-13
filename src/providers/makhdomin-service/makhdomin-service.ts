@@ -45,7 +45,7 @@ export class MakhdominServiceProvider {
         ChomosyaLevel: ChamasLevel.ebsaltos
       },
       {
-        name: "Ayman",
+        name: "Mina",
         phone: 123123,
         zone: "B",
         street: "Daher",

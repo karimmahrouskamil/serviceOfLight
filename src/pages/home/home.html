@@ -1,6 +1,32 @@
-<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-<ion-list>
-  <button ion-item *ngFor="let oneMakhdoum of makhdouminList"  (click)="passDetailOfMakhdoum(oneMakhdoum)" >
+<!-- <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar> -->
+<!-- <ion-list>
+  <button ion-item *ngFor="let oneMakhdoum of makhdouminList" (click)="passDetailOfMakhdoum(oneMakhdoum)">
     {{ oneMakhdoum.name }}
-  </button>  
-</ion-list>
+  </button>
+</ion-list> -->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Makhdoumin List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    </ion-list-header>
+
+    <ion-item ion-item *ngFor="let oneMakhdoum of makhdouminList" (click)="passDetailOfMakhdoum(oneMakhdoum)">
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/avatar.png">
+      </ion-avatar>
+      <h2>{{ oneMakhdoum.name }}</h2>
+      <h3>{{oneMakhdoum.phone}}</h3>
+      <p>{{oneMakhdoum.street}}</p>
+    </ion-item>
+
+
+  </ion-list>
+
+
+</ion-content>
