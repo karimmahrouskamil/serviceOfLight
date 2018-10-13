@@ -6,11 +6,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-
+import { MakhdominProvider } from '../providers/makhdomin/makhdomin';
+import { MakhdominServiceProvider } from '../providers/makhdomin-service/makhdomin-service';
+import { MakhdoumDetailsPage } from '../pages/makhdoum-details/makhdoum-details';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    MakhdoumDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -19,12 +22,15 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    MakhdoumDetailsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    MakhdominProvider,
+    MakhdominServiceProvider
   ]
 })
 export class AppModule {}
