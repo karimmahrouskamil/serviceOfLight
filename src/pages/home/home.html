@@ -1,3 +1,4 @@
+<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 <ion-list>
   <button ion-item *ngFor="let oneMakhdoum of makhdouminList"  (click)="passDetailOfMakhdoum(oneMakhdoum)" >
     {{ oneMakhdoum.name }}
