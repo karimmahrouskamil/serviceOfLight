@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { MakhdominProvider } from '../providers/makhdomin/makhdomin';
 import { MakhdominServiceProvider } from '../providers/makhdomin-service/makhdomin-service';
 import { MakhdoumDetailsPage } from '../pages/makhdoum-details/makhdoum-details';
+import { CallNumber } from '@ionic-native/call-number';
 @NgModule({
   declarations: [
     MyApp,
@@ -30,7 +31,8 @@ import { MakhdoumDetailsPage } from '../pages/makhdoum-details/makhdoum-details'
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     MakhdominProvider,
-    MakhdominServiceProvider
+    MakhdominServiceProvider,
+    CallNumber
   ]
 })
 export class AppModule {}

@@ -3,6 +3,8 @@ import { NavController } from "ionic-angular";
 import { MakhdominServiceProvider } from "../../providers/makhdomin-service/makhdomin-service";
 import { MakhdominProvider } from "../../providers/makhdomin/makhdomin";
 import { MakhdoumDetailsPage } from "../makhdoum-details/makhdoum-details";
+import { CallNumber } from "@ionic-native/call-number";
+
 @Component({
   selector: "page-home",
   templateUrl: "home.html"
@@ -15,7 +17,8 @@ export class HomePage {
 
   constructor(
     public navCtrl: NavController,
-    mahdouminService: MakhdominServiceProvider
+    mahdouminService: MakhdominServiceProvider,
+    private callNumber: CallNumber
   ) {
     this._mahdouminService = mahdouminService;
     this.initializeData();
@@ -43,5 +46,14 @@ export class HomePage {
 
       this.makhdouminList = this._makhdouminList;
     }
+  }
+  callCurrentMakhdoum(ev: any, oneMakhdoum) {
+    ev.stopPropagation();
+    const calledNumber = oneMakhdoum.phone.toString();
+
+    this.callNumber
+      .callNumber(calledNumber, false)
+      .then(res => console.log("Launched dialer!", res))
+      .catch(err => console.log("Error launching dialer", err));
   }
 }
