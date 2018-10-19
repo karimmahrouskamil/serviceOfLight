@@ -10,12 +10,12 @@ import { Injectable } from "@angular/core";
 @Injectable()
 export class MakhdominProvider implements MakhdominProviderinterface {
   name: string;
-  phone: number;
+  phone: string;
   zone: string;
   street: string;
   numberOfBuilding: number;
   flatNumber: number;
-  HomePhone: number;
+  HomePhone: string;
   Birthdate: Date;
   FatherOfConfess: string;
   servantFollowing: string;
@@ -28,12 +28,12 @@ export class MakhdominProvider implements MakhdominProviderinterface {
 
 export interface MakhdominProviderinterface {
   name: string;
-  phone: any;
+  phone: string;
   zone: string;
   street: string;
   numberOfBuilding: number;
   flatNumber: number;
-  HomePhone: any;
+  HomePhone: string;
   Birthdate: Date;
   FatherOfConfess: string;
   servantFollowing: string;
