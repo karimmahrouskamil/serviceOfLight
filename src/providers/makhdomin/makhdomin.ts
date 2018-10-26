@@ -16,10 +16,10 @@ export class MakhdominProvider implements MakhdominProviderinterface {
   numberOfBuilding: number;
   flatNumber: number;
   HomePhone: string;
-  Birthdate: Date;
+  Birthdate: string;
   FatherOfConfess: string;
   servantFollowing: string;
-  ChomosyaLevel: ChamasLevel.ebsaltos;
+  ChomosyaLevel: string;
 
   constructor() {
     console.log("Hello MakhdominProvider Provider");
@@ -34,10 +34,10 @@ export interface MakhdominProviderinterface {
   numberOfBuilding: number;
   flatNumber: number;
   HomePhone: string;
-  Birthdate: Date;
+  Birthdate: string;
   FatherOfConfess: string;
   servantFollowing: string;
-  ChomosyaLevel: ChamasLevel.ebsaltos;
+  ChomosyaLevel: string;
 }
 export enum ChamasLevel {
   ebsaltos = "ebsaltos"
