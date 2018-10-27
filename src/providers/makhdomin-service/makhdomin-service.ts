@@ -18,7 +18,6 @@ export class MakhdominServiceProvider {
 
   constructor(public http: Http, public httpClient: HttpClient) {}
 
-
   getMakhdouminData() {
     return new Promise(resolve => {
       this.http
@@ -27,6 +26,33 @@ export class MakhdominServiceProvider {
         .subscribe(
           data => {
             resolve(data);
+          },
+          err => {
+            console.log(err);
+          }
+        );
+    });
+  }
+  getMakhdouminDataFiltered(val) {
+    return new Promise(resolve => {
+      this.http
+        .get("assets/data.json")
+        .map(res => res.json())
+        .subscribe(
+          data => {
+            if (val && val.trim() != "") {
+              data = data.filter(eachMakhdoum => {
+                return (
+                  eachMakhdoum.name.toLowerCase().indexOf(val.toLowerCase()) >
+                  -1
+                );
+              });
+              resolve(data);
+            } else {
+              this.getMakhdouminData().then(data => {
+                resolve(data);
+              });
+            }
           },
           err => {
             console.log(err);

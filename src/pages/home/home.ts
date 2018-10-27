@@ -39,19 +39,16 @@ export class HomePage {
   }
 
   getItems(ev: any) {
-    this.initializeData();
+
 
     // set val to the value of the searchbar
     const val = ev.target.value;
 
     // if the value is an empty string don't filter the items
-    if (val && val.trim() != "") {
-      this._makhdouminList = this.makhdouminList.filter(eachMakhdoum => {
-        return eachMakhdoum.name.toLowerCase().indexOf(val.toLowerCase()) > -1;
-      });
-
-      this.makhdouminList = this._makhdouminList;
-    }
+    this._mahdouminService.getMakhdouminDataFiltered(val).then(data => {
+      this.makhdouminList = data;
+      console.log(data);
+    });
   }
 
   callCurrentMakhdoum(ev: any, oneMakhdoum) {
