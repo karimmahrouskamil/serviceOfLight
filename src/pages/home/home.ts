@@ -4,7 +4,8 @@ import { MakhdominServiceProvider } from "../../providers/makhdomin-service/makh
 import { MakhdominProvider } from "../../providers/makhdomin/makhdomin";
 import { MakhdoumDetailsPage } from "../makhdoum-details/makhdoum-details";
 import { CallNumber } from "@ionic-native/call-number";
-
+import { Observable } from "rxjs/Observable";
+import { Http } from "@angular/http";
 @Component({
   selector: "page-home",
   templateUrl: "home.html"
@@ -14,18 +15,25 @@ export class HomePage {
   makhdouminList: [MakhdominProvider];
   _makhdouminList: any;
   searchQuery: string = "";
-
+ 
   constructor(
     public navCtrl: NavController,
     mahdouminService: MakhdominServiceProvider,
-    private callNumber: CallNumber
+    private callNumber: CallNumber,
+    public http: Http
   ) {
     this._mahdouminService = mahdouminService;
+
     this.initializeData();
   }
 
   initializeData() {
-    this.makhdouminList = this._mahdouminService.getMakhdominData();
+    this.http
+      .get("assets/data.json")
+      .map(res => res.json())
+      .subscribe(data => {
+        this.makhdouminList = data;
+      });
   }
 
   passDetailOfMakhdoum(oneMakhdoum): void {
