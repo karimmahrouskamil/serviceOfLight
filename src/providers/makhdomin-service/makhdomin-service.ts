@@ -4,6 +4,8 @@ import { MakhdominProvider, ChamasLevel } from "../makhdomin/makhdomin";
 import { Http } from "@angular/http";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/timeout";
+import { Observable } from "rxjs/Observable";
+import { HttpClient } from "@angular/common/http";
 /*
   Generated class for the MakhdominServiceProvider provider.
 
@@ -13,11 +15,17 @@ import "rxjs/add/operator/timeout";
 @Injectable()
 export class MakhdominServiceProvider {
   makhdouminList: [MakhdominProvider];
-  dataDummy : any;
-  constructor(public http: Http) {
-    console.log("Hello MakhdominServiceProvider Provider");
+  dataDummy: any;
+  films: any;
+  constructor(public http: Http, public httpClient: HttpClient) {
+    this.films = this.makeGetRequest();
   }
-
+  public makeGetRequest() {
+    let data: Observable<any> = this.httpClient.get("assets/data.json");
+    data.subscribe(result => {
+      console.log(result);
+    });
+  }
   getMakhdominData(): [MakhdominProvider] {
     const data: [MakhdominProvider] = [
       {
@@ -35,7 +43,7 @@ export class MakhdominServiceProvider {
       }
     ];
     this.makhdouminList = data;
-this.getMyData();
+    this.getMyData();
     return this.makhdouminList;
   }
   getMyData() {

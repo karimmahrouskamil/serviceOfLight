@@ -10,6 +10,7 @@ import { MakhdominProvider } from '../providers/makhdomin/makhdomin';
 import { MakhdominServiceProvider } from '../providers/makhdomin-service/makhdomin-service';
 import { MakhdoumDetailsPage } from '../pages/makhdoum-details/makhdoum-details';
 import { CallNumber } from '@ionic-native/call-number';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     MyApp,
@@ -19,7 +20,8 @@ import { CallNumber } from '@ionic-native/call-number';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
