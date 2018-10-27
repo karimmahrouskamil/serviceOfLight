@@ -15,7 +15,7 @@ export class HomePage {
   makhdouminList: [MakhdominProvider];
   _makhdouminList: any;
   searchQuery: string = "";
- 
+
   constructor(
     public navCtrl: NavController,
     mahdouminService: MakhdominServiceProvider,
@@ -28,12 +28,10 @@ export class HomePage {
   }
 
   initializeData() {
-    this.http
-      .get("assets/data.json")
-      .map(res => res.json())
-      .subscribe(data => {
-        this.makhdouminList = data;
-      });
+    this._mahdouminService.getMakhdouminData().then(data => {
+      this.makhdouminList = data;
+      console.log(data);
+    });
   }
 
   passDetailOfMakhdoum(oneMakhdoum): void {
@@ -55,6 +53,7 @@ export class HomePage {
       this.makhdouminList = this._makhdouminList;
     }
   }
+
   callCurrentMakhdoum(ev: any, oneMakhdoum) {
     ev.stopPropagation();
     const calledNumber = oneMakhdoum.phone.toString();
@@ -64,4 +63,5 @@ export class HomePage {
       .then(res => console.log("Launched dialer!", res))
       .catch(err => console.log("Error launching dialer", err));
   }
+
 }

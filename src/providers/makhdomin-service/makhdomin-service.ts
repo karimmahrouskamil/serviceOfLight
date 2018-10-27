@@ -15,43 +15,23 @@ import { HttpClient } from "@angular/common/http";
 @Injectable()
 export class MakhdominServiceProvider {
   makhdouminList: [MakhdominProvider];
-  dataDummy: any;
-  films: any;
-  constructor(public http: Http, public httpClient: HttpClient) {
-    this.films = this.makeGetRequest();
-  }
-  public makeGetRequest() {
-    let data: Observable<any> = this.httpClient.get("assets/data.json");
-    data.subscribe(result => {
-      console.log(result);
+
+  constructor(public http: Http, public httpClient: HttpClient) {}
+
+
+  getMakhdouminData() {
+    return new Promise(resolve => {
+      this.http
+        .get("assets/data.json")
+        .map(res => res.json())
+        .subscribe(
+          data => {
+            resolve(data);
+          },
+          err => {
+            console.log(err);
+          }
+        );
     });
-  }
-  getMakhdominData(): [MakhdominProvider] {
-    const data: [MakhdominProvider] = [
-      {
-        name: "youssef",
-        phone: "123123",
-        zone: "A",
-        street: "Habib shalaby",
-        numberOfBuilding: 12,
-        flatNumber: 5,
-        HomePhone: "213",
-        Birthdate: "new Date()",
-        FatherOfConfess: "fr youseef samir",
-        servantFollowing: "bassem makram",
-        ChomosyaLevel: "ChamasLevel.ebsaltos"
-      }
-    ];
-    this.makhdouminList = data;
-    this.getMyData();
-    return this.makhdouminList;
-  }
-  getMyData() {
-    this.http
-      .get("assets/data.json")
-      .map(res => res.json())
-      .subscribe(data => {
-        this.dataDummy = data;
-      });
   }
 }
