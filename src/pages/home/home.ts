@@ -16,7 +16,8 @@ export class HomePage {
   makhdouminList: [MakhdominProvider];
   _makhdouminList: any;
   searchQuery: string = "";
-
+  filterClassVal: string = "";
+  filterQueryString: string = "";
   constructor(
     public navCtrl: NavController,
     mahdouminService: MakhdominServiceProvider,
@@ -40,16 +41,15 @@ export class HomePage {
   }
 
   getItems(ev: any) {
-
-
     // set val to the value of the searchbar
-    const val = ev.target.value;
+    this.filterQueryString = ev.target.value;
 
     // if the value is an empty string don't filter the items
-    this._mahdouminService.getMakhdouminDataFiltered(val).then(data => {
-      this.makhdouminList = data;
-      console.log(data);
-    });
+    this._mahdouminService
+      .getMakhdouminDataFiltered(this.filterQueryString, this.filterClassVal)
+      .then(data => {
+        this.makhdouminList = data;
+      });
   }
 
   callCurrentMakhdoum(ev: any, oneMakhdoum) {
@@ -62,13 +62,13 @@ export class HomePage {
       .catch(err => console.log("Error launching dialer", err));
   }
 
-  filterPerClass(classGrade){
-    const val = classGrade;
-
+  filterPerClass(classGrade) {
+    this.filterClassVal = classGrade;
     // if the value is an empty string don't filter the items
-    this._mahdouminService.getEachClass(val).then(data => {
-      this.makhdouminList = data;
-      console.log(data);
-    });
+    this._mahdouminService
+      .getMakhdouminDataFiltered(this.filterQueryString, this.filterClassVal)
+      .then(data => {
+        this.makhdouminList = data;
+      });
   }
 }

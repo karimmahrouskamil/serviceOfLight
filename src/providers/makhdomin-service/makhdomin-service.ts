@@ -33,47 +33,42 @@ export class MakhdominServiceProvider {
         );
     });
   }
-  getMakhdouminDataFiltered(val) {
+  getMakhdouminDataFiltered(val, filterClassVal) {
     return new Promise(resolve => {
       this.http
         .get("assets/data.json")
         .map(res => res.json())
         .subscribe(
           data => {
-            if (val && val.trim() != "") {
+            if (filterClassVal != "") {
+              data = data.filter(eachMakhdoum => {
+                return eachMakhdoum.classGrade === filterClassVal;
+              });
+            }
+            if (val && val.trim() != "" && filterClassVal != "") {
               data = data.filter(eachMakhdoum => {
                 return (
                   eachMakhdoum.name.toLowerCase().indexOf(val.toLowerCase()) >
                   -1
                 );
               });
+
               resolve(data);
-            } else {
-              this.getMakhdouminData().then(data => {
-                resolve(data);
-              });
-            }
-          },
-          err => {
-            console.log(err);
-          }
-        );
-    });
-  }
-  getEachClass(val) {
-    const classGrade = val;
-    return new Promise(resolve => {
-      this.http
-        .get("assets/data.json")
-        .map(res => res.json())
-        .subscribe(
-          data => {
-            if (val && val.trim() != "") {
+            } else if (val && val.trim() != "" && filterClassVal == "") {
               data = data.filter(eachMakhdoum => {
-                return (eachMakhdoum.classGrade === classGrade);
+                return (
+                  eachMakhdoum.name.toLowerCase().indexOf(val.toLowerCase()) >
+                  -1
+                );
+              });
+
+              resolve(data);
+            } else if (val == "" && filterClassVal != "") {
+              data = data.filter(eachMakhdoum => {
+                return eachMakhdoum.classGrade === filterClassVal;
               });
               resolve(data);
-            } else {
+            } else if (val == "" && filterClassVal == "") {
               this.getMakhdouminData().then(data => {
                 resolve(data);
               });
@@ -85,4 +80,5 @@ export class MakhdominServiceProvider {
         );
     });
   }
+
 }
