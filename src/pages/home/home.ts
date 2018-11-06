@@ -4,8 +4,9 @@ import { MakhdominServiceProvider } from "../../providers/makhdomin-service/makh
 import { MakhdominProvider } from "../../providers/makhdomin/makhdomin";
 import { MakhdoumDetailsPage } from "../makhdoum-details/makhdoum-details";
 import { CallNumber } from "@ionic-native/call-number";
-import { Observable } from "rxjs/Observable";
+// import { Observable } from "rxjs/Observable";
 import { Http } from "@angular/http";
+
 @Component({
   selector: "page-home",
   templateUrl: "home.html"

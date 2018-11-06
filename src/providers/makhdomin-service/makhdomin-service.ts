@@ -1,10 +1,10 @@
 // import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { MakhdominProvider, ChamasLevel } from "../makhdomin/makhdomin";
+import { MakhdominProvider } from "../makhdomin/makhdomin";
 import { Http } from "@angular/http";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/timeout";
-import { Observable } from "rxjs/Observable";
+// import { Observable } from "rxjs/Observable";
 import { HttpClient } from "@angular/common/http";
 /*
   Generated class for the MakhdominServiceProvider provider.
