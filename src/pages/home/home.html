@@ -1,43 +1,52 @@
-<ion-row>
-  
-      <ion-fab bottom right >
-          <button ion-fab mini>filter</button>
-          <ion-fab-list side="top">
-            <button ion-fab (click)="filterPerClass('1')">Oula</button>
-            <button ion-fab (click)="filterPerClass('2')">tanya</button>
-            <button ion-fab (click)="filterPerClass('3')">talta</button>
-          </ion-fab-list>
-          
-        </ion-fab>
-  <ion-col col-12>
-    <ion-navbar>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title>Makhdoumin List</ion-title>
-    </ion-navbar>
-  </ion-col>
-  <ion-col col-12>
+<ion-content>
+  <ion-row>
 
-    <ion-list>
-      <ion-list-header>
-        <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-      </ion-list-header>
-      <ion-item-sliding *ngFor="let oneMakhdoum of makhdouminList" (click)="passDetailOfMakhdoum(oneMakhdoum)">
-        <ion-item>
-          <ion-avatar item-start>
-            <img src="../../assets/imgs/avatar.png">
-          </ion-avatar>
-          <h2>{{ oneMakhdoum.name }}</h2>
-        </ion-item>
 
-        <ion-item-options side="right">
-          <button ion-button color="secondary" (click)="callCurrentMakhdoum($event, oneMakhdoum)">
-            <ion-icon name="call"></ion-icon>
-            Call
-          </button>
-        </ion-item-options>
-      </ion-item-sliding>
-    </ion-list>
-  </ion-col>
-</ion-row>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+      </ion-refresher-content>
+    </ion-refresher>
+
+
+    <ion-fab bottom right>
+      <button ion-fab mini>filter</button>
+      <ion-fab-list side="top">
+        <button ion-fab (click)="filterPerClass('1')">Oula</button>
+        <button ion-fab (click)="filterPerClass('2')">tanya</button>
+        <button ion-fab (click)="filterPerClass('3')">talta</button>
+      </ion-fab-list>
+
+    </ion-fab>
+    <ion-col col-12>
+      <ion-navbar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Makhdoumin List</ion-title>
+      </ion-navbar>
+    </ion-col>
+    <ion-col col-12>
+
+      <ion-list>
+        <ion-list-header>
+          <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+        </ion-list-header>
+        <ion-item-sliding *ngFor="let oneMakhdoum of makhdouminList" (click)="passDetailOfMakhdoum(oneMakhdoum)">
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="../../assets/imgs/avatar.png">
+            </ion-avatar>
+            <h2>{{ oneMakhdoum.name }}</h2>
+          </ion-item>
+
+          <ion-item-options side="right">
+            <button ion-button color="secondary" (click)="callCurrentMakhdoum($event, oneMakhdoum)">
+              <ion-icon name="call"></ion-icon>
+              Call
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-content>

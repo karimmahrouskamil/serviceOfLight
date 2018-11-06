@@ -61,6 +61,14 @@ export class HomePage {
       .then(res => console.log("Launched dialer!", res))
       .catch(err => console.log("Error launching dialer", err));
   }
+  doRefresh(refresher) {
+    
+
+    setTimeout(() => {
+      this.initializeData();
+      refresher.complete();
+    }, 2000);
+  }
 
   filterPerClass(classGrade) {
     this.filterClassVal = classGrade;
