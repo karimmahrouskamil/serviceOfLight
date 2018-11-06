@@ -60,4 +60,29 @@ export class MakhdominServiceProvider {
         );
     });
   }
+  getEachClass(val) {
+    const classGrade = val;
+    return new Promise(resolve => {
+      this.http
+        .get("assets/data.json")
+        .map(res => res.json())
+        .subscribe(
+          data => {
+            if (val && val.trim() != "") {
+              data = data.filter(eachMakhdoum => {
+                return (eachMakhdoum.classGrade === classGrade);
+              });
+              resolve(data);
+            } else {
+              this.getMakhdouminData().then(data => {
+                resolve(data);
+              });
+            }
+          },
+          err => {
+            console.log(err);
+          }
+        );
+    });
+  }
 }

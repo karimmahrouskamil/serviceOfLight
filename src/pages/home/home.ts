@@ -62,4 +62,13 @@ export class HomePage {
       .catch(err => console.log("Error launching dialer", err));
   }
 
+  filterPerClass(classGrade){
+    const val = classGrade;
+
+    // if the value is an empty string don't filter the items
+    this._mahdouminService.getEachClass(val).then(data => {
+      this.makhdouminList = data;
+      console.log(data);
+    });
+  }
 }

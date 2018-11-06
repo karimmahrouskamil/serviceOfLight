@@ -10,7 +10,8 @@
     "Birthdate": "new Date()",
     "FatherOfConfess": "fr youseef Angelos",
     "servantFollowing": "Ossama samir",
-    "ChomosyaLevel": "ChamasLevel.ebsaltos"
+    "ChomosyaLevel": "ChamasLevel.ebsaltos",
+    "classGrade": "1"
   },
   {
     "name": "Mina",
@@ -23,7 +24,8 @@
     "Birthdate": "new Date()",
     "FatherOfConfess": "fr youseef Angelos",
     "servantFollowing": "Ossama samir",
-    "ChomosyaLevel": "ChamasLevel.ebsaltos"
+    "ChomosyaLevel": "ChamasLevel.ebsaltos",
+    "classGrade": "2"
   },
   {
     "name": "macarios",
@@ -36,7 +38,8 @@
     "Birthdate": "new Date()",
     "FatherOfConfess": "fr youseef Angelos",
     "servantFollowing": "Ossama samir",
-    "ChomosyaLevel": "ChamasLevel.ebsaltos"
+    "ChomosyaLevel": "ChamasLevel.ebsaltos",
+    "classGrade": "3"
   },
   {
     "name": "andro",
@@ -49,7 +52,8 @@
     "Birthdate": "new Date()",
     "FatherOfConfess": "fr youseef Angelos",
     "servantFollowing": "Ossama samir",
-    "ChomosyaLevel": "ChamasLevel.ebsaltos"
+    "ChomosyaLevel": "ChamasLevel.ebsaltos",
+    "classGrade": "1"
   },
   {
     "name": "jorj",
@@ -62,6 +66,21 @@
     "Birthdate": "new Date()",
     "FatherOfConfess": "fr youseef Angelos",
     "servantFollowing": "Ossama samir",
-    "ChomosyaLevel": "ChamasLevel.ebsaltos"
+    "ChomosyaLevel": "ChamasLevel.ebsaltos",
+    "classGrade": "2"
+  },
+  {
+    "name": "wanas",
+    "phone": 123123,
+    "zone": "B",
+    "street": "Daher",
+    "numberOfBuilding": 4,
+    "flatNumber": 5,
+    "HomePhone": 213,
+    "Birthdate": "new Date()",
+    "FatherOfConfess": "fr youseef Angelos",
+    "servantFollowing": "Ossama samir",
+    "ChomosyaLevel": "ChamasLevel.ebsaltos",
+    "classGrade": "3"
   }
 ]
