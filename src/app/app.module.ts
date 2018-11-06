@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
+import { ListPage } from '../pages/list/list';
 import { HomePage } from '../pages/home/home';
 import { MakhdominProvider } from '../providers/makhdomin/makhdomin';
 import { MakhdominServiceProvider } from '../providers/makhdomin-service/makhdomin-service';
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     MyApp,
     HomePage,
-    MakhdoumDetailsPage
+    MakhdoumDetailsPage,
+    ListPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
   entryComponents: [
     MyApp,
     HomePage,
-    MakhdoumDetailsPage
+    MakhdoumDetailsPage,
+    ListPage
   ],
   providers: [
     StatusBar,
