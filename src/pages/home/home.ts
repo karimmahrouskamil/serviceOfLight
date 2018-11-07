@@ -30,6 +30,8 @@ export class HomePage {
   }
 
   initializeData() {
+    this.filterClassVal = "";
+    this.filterQueryString = "";
     this._mahdouminService.getMakhdouminData().then(data => {
       this.makhdouminList = data;
       console.log(data);
