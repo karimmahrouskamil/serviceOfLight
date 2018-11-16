@@ -64,7 +64,7 @@ export class HomePage {
       .catch(err => console.log("Error launching dialer", err));
   }
   doRefresh(refresher) {
-    
+
 
     setTimeout(() => {
       this.initializeData();

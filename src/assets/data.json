@@ -1,86 +1,34 @@
-[
-  {
-    "name": "Ayman",
-    "phone": 123123,
-    "zone": "B",
-    "street": "Daher",
-    "numberOfBuilding": 4,
-    "flatNumber": 5,
-    "HomePhone": 213,
-    "Birthdate": "new Date()",
-    "FatherOfConfess": "fr youseef Angelos",
-    "servantFollowing": "Ossama samir",
-    "ChomosyaLevel": "ChamasLevel.ebsaltos",
-    "classGrade": "1"
+[{
+  "_id": "5beef7c505d39728a7c046e0",
+  "personalInfo": {
+    "name": "margo",
+    "address": {
+      "buildingNumber": 5,
+      "streetName": "Lololoalaoao",
+      "floorNumber": 32,
+      "flatNumber": 12,
+      "zone": "B",
+      "remarks": "left"
+    },
+    "Mobiles": {
+      "MobilePhone": 123123,
+      "HomePhone": 3123123,
+      "fatherPhone": 3123132
+    },
+    "school": "de la salle",
+    "birthDate": "2017-08-24T00:00:00.000Z",
+    "onlineInfo": {
+      "facebook": "karim ",
+      "email": "kkamil@eg"
+    }
   },
-  {
-    "name": "Mina",
-    "phone": 123123,
-    "zone": "B",
-    "street": "Daher",
-    "numberOfBuilding": 4,
-    "flatNumber": 5,
-    "HomePhone": 213,
-    "Birthdate": "new Date()",
-    "FatherOfConfess": "fr youseef Angelos",
-    "servantFollowing": "Ossama samir",
-    "ChomosyaLevel": "ChamasLevel.ebsaltos",
-    "classGrade": "2"
+  "churchAndSpiritualInfo": {
+    "class": 1,
+    "fatherOfConfession": "father youssef",
+    "servantFollowing": "karim kamil",
+    "chomosya": "esbaltos",
+    "Notes": "quick note"
   },
-  {
-    "name": "macarios",
-    "phone": 123123,
-    "zone": "B",
-    "street": "Daher",
-    "numberOfBuilding": 4,
-    "flatNumber": 5,
-    "HomePhone": 213,
-    "Birthdate": "new Date()",
-    "FatherOfConfess": "fr youseef Angelos",
-    "servantFollowing": "Ossama samir",
-    "ChomosyaLevel": "ChamasLevel.ebsaltos",
-    "classGrade": "3"
-  },
-  {
-    "name": "andro",
-    "phone": 123123,
-    "zone": "B",
-    "street": "Daher",
-    "numberOfBuilding": 4,
-    "flatNumber": 5,
-    "HomePhone": 213,
-    "Birthdate": "new Date()",
-    "FatherOfConfess": "fr youseef Angelos",
-    "servantFollowing": "Ossama samir",
-    "ChomosyaLevel": "ChamasLevel.ebsaltos",
-    "classGrade": "1"
-  },
-  {
-    "name": "jorj",
-    "phone": 123123,
-    "zone": "B",
-    "street": "Daher",
-    "numberOfBuilding": 4,
-    "flatNumber": 5,
-    "HomePhone": 213,
-    "Birthdate": "new Date()",
-    "FatherOfConfess": "fr youseef Angelos",
-    "servantFollowing": "Ossama samir",
-    "ChomosyaLevel": "ChamasLevel.ebsaltos",
-    "classGrade": "2"
-  },
-  {
-    "name": "wanas",
-    "phone": 123123,
-    "zone": "B",
-    "street": "Daher",
-    "numberOfBuilding": 4,
-    "flatNumber": 5,
-    "HomePhone": 213,
-    "Birthdate": "new Date()",
-    "FatherOfConfess": "fr youseef Angelos",
-    "servantFollowing": "Ossama samir",
-    "ChomosyaLevel": "ChamasLevel.ebsaltos",
-    "classGrade": "3"
-  }
-]
+  "DateOfCreation": "2017-08-24T00:00:00.000Z",
+  "__v": 0
+}]
