@@ -48,7 +48,7 @@ export class MakhdominServiceProvider {
             if (val && val.trim() != "" && filterClassVal != "") {
               data = data.filter(eachMakhdoum => {
                 return (
-                  eachMakhdoum.name.toLowerCase().indexOf(val.toLowerCase()) >
+                  eachMakhdoum.personalInfo.name.toLowerCase().indexOf(val.toLowerCase()) >
                   -1
                 );
               });
@@ -57,7 +57,7 @@ export class MakhdominServiceProvider {
             } else if (val && val.trim() != "" && filterClassVal == "") {
               data = data.filter(eachMakhdoum => {
                 return (
-                  eachMakhdoum.name.toLowerCase().indexOf(val.toLowerCase()) >
+                  eachMakhdoum.personalInfo.name.toLowerCase().indexOf(val.toLowerCase()) >
                   -1
                 );
               });
