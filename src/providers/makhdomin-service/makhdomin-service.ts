@@ -16,7 +16,7 @@ import { HttpClient } from "@angular/common/http";
 export class MakhdominServiceProvider {
   makhdouminList: [MakhdominProvider];
 
-  constructor(public http: Http, public httpClient: HttpClient) {}
+  constructor(public http: Http, public httpClient: HttpClient) { }
 
   getMakhdouminData() {
     return new Promise(resolve => {
@@ -24,12 +24,12 @@ export class MakhdominServiceProvider {
         .get("assets/data.json")
         .map(res => res.json())
         .subscribe(
-          data => {
-            resolve(data);
-          },
-          err => {
-            console.log(err);
-          }
+        data => {
+          resolve(data);
+        },
+        err => {
+          console.log(err);
+        }
         );
     });
   }
@@ -39,44 +39,44 @@ export class MakhdominServiceProvider {
         .get("assets/data.json")
         .map(res => res.json())
         .subscribe(
-          data => {
-            if (filterClassVal != "") {
-              data = data.filter(eachMakhdoum => {
-                return eachMakhdoum.classGrade === filterClassVal;
-              });
-            }
-            if (val && val.trim() != "" && filterClassVal != "") {
-              data = data.filter(eachMakhdoum => {
-                return (
-                  eachMakhdoum.personalInfo.name.toLowerCase().indexOf(val.toLowerCase()) >
-                  -1
-                );
-              });
-
-              resolve(data);
-            } else if (val && val.trim() != "" && filterClassVal == "") {
-              data = data.filter(eachMakhdoum => {
-                return (
-                  eachMakhdoum.personalInfo.name.toLowerCase().indexOf(val.toLowerCase()) >
-                  -1
-                );
-              });
-
-              resolve(data);
-            } else if (val == "" && filterClassVal != "") {
-              data = data.filter(eachMakhdoum => {
-                return eachMakhdoum.classGrade === filterClassVal;
-              });
-              resolve(data);
-            } else if (val == "" && filterClassVal == "") {
-              this.getMakhdouminData().then(data => {
-                resolve(data);
-              });
-            }
-          },
-          err => {
-            console.log(err);
+        data => {
+          if (filterClassVal != "") {
+            data = data.filter(eachMakhdoum => {
+              return eachMakhdoum.churchAndSpiritualInfo.class === filterClassVal;
+            });
           }
+          if (val && val.trim() != "" && filterClassVal != "") {
+            data = data.filter(eachMakhdoum => {
+              return (
+                eachMakhdoum.personalInfo.name.toLowerCase().indexOf(val.toLowerCase()) >
+                -1
+              );
+            });
+
+            resolve(data);
+          } else if (val && val.trim() != "" && filterClassVal == "") {
+            data = data.filter(eachMakhdoum => {
+              return (
+                eachMakhdoum.personalInfo.name.toLowerCase().indexOf(val.toLowerCase()) >
+                -1
+              );
+            });
+
+            resolve(data);
+          } else if (val == "" && filterClassVal != "") {
+            data = data.filter(eachMakhdoum => {
+              return eachMakhdoum.churchAndSpiritualInfo.class === filterClassVal;
+            });
+            resolve(data);
+          } else if (val == "" && filterClassVal == "") {
+            this.getMakhdouminData().then(data => {
+              resolve(data);
+            });
+          }
+        },
+        err => {
+          console.log(err);
+        }
         );
     });
   }
