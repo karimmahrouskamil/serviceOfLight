@@ -11,9 +11,10 @@
       "remarks": "left"
     },
     "Mobiles": {
-      "MobilePhone": 123123,
-      "HomePhone": 3123123,
-      "fatherPhone": 3123132
+      "MobilePhone": "01005776552",
+      "HomePhone": "259280763",
+      "fatherPhone": "01005776552",
+      "motherPhone": "01005776552"
     },
     "school": "de la salle",
     "birthDate": "2017-08-24T00:00:00.000Z",

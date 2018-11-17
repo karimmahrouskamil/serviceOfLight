@@ -12,7 +12,7 @@
   <ion-col col-12>
 
     <ion-row>
-
+      <!-- address section -->
       <ion-col col-12>
         <ion-row>
           <ion-card>
@@ -35,6 +35,31 @@
 
         </ion-row>
       </ion-col>
+
+       <!-- phone section -->
+       <ion-col col-12>
+          <ion-row>
+            <ion-card>
+              <ion-card-header class="section-data">
+                الاتصال
+              </ion-card-header>
+              <ion-card-content>
+                <ion-row>
+                  <ion-col class="address-data" col-9>{{detailData.personalInfo.Mobiles.MobilePhone}} </ion-col>
+                  <ion-col class="address-label" col-3>الموبايل</ion-col>
+                  <ion-col class="address-data" col-9>{{detailData.personalInfo.Mobiles.HomePhone}}</ion-col>
+                  <ion-col class="address-label" col-3>المنزل</ion-col>
+                  <ion-col class="address-data" col-9>{{detailData.personalInfo.Mobiles.fatherPhone}}</ion-col>
+                  <ion-col class="address-label" col-3>الوالد</ion-col>
+                  <ion-col class="address-data" col-9>{{detailData.personalInfo.Mobiles.motherPhone}} </ion-col>
+                  <ion-col class="address-label" col-3>الوالدة</ion-col>
+                </ion-row>
+              </ion-card-content>
+            </ion-card>
+
+          </ion-row>
+        </ion-col>
+
     </ion-row>
 
 
