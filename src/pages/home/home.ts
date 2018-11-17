@@ -56,7 +56,7 @@ export class HomePage {
 
   callCurrentMakhdoum(ev: any, oneMakhdoum) {
     ev.stopPropagation();
-    const calledNumber = oneMakhdoum.phone.toString();
+    const calledNumber = oneMakhdoum.personalInfo.Mobiles.MobilePhone.toString();
 
     this.callNumber
       .callNumber(calledNumber, false)
