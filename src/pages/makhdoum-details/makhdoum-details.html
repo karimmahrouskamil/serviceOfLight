@@ -1,4 +1,4 @@
-<ion-row>
+<ion-row class="makhdoum-page-container">
   <ion-col col-12>
 
     <ion-navbar>
@@ -36,30 +36,82 @@
         </ion-row>
       </ion-col>
 
-       <!-- phone section -->
-       <ion-col col-12>
-          <ion-row>
-            <ion-card>
-              <ion-card-header class="section-data">
-                الاتصال
-              </ion-card-header>
-              <ion-card-content>
-                <ion-row>
-                  <ion-col class="address-data" col-9>{{detailData.personalInfo.Mobiles.MobilePhone}} </ion-col>
-                  <ion-col class="address-label" col-3>الموبايل</ion-col>
-                  <ion-col class="address-data" col-9>{{detailData.personalInfo.Mobiles.HomePhone}}</ion-col>
-                  <ion-col class="address-label" col-3>المنزل</ion-col>
-                  <ion-col class="address-data" col-9>{{detailData.personalInfo.Mobiles.fatherPhone}}</ion-col>
-                  <ion-col class="address-label" col-3>الوالد</ion-col>
-                  <ion-col class="address-data" col-9>{{detailData.personalInfo.Mobiles.motherPhone}} </ion-col>
-                  <ion-col class="address-label" col-3>الوالدة</ion-col>
-                </ion-row>
-              </ion-card-content>
-            </ion-card>
+      <!-- phone section -->
+      <ion-col col-12>
+        <ion-row>
+          <ion-card>
+            <ion-card-header class="section-data">
+              الاتصال
+            </ion-card-header>
+            <ion-card-content>
+              <ion-row>
+                <ion-col class="address-data" col-9>{{detailData.personalInfo.Mobiles.MobilePhone}} </ion-col>
+                <ion-col class="address-label" col-3>الموبايل</ion-col>
+                <ion-col class="address-data" col-9>{{detailData.personalInfo.Mobiles.HomePhone}}</ion-col>
+                <ion-col class="address-label" col-3>المنزل</ion-col>
+                <ion-col class="address-data" col-9>{{detailData.personalInfo.Mobiles.fatherPhone}}</ion-col>
+                <ion-col class="address-label" col-3>الوالد</ion-col>
+                <ion-col class="address-data" col-9>{{detailData.personalInfo.Mobiles.motherPhone}} </ion-col>
+                <ion-col class="address-label" col-3>الوالدة</ion-col>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>
 
-          </ion-row>
-        </ion-col>
+        </ion-row>
+      </ion-col>
 
+
+
+      <!-- church section -->
+      <ion-col col-12>
+        <ion-row>
+          <ion-card>
+            <ion-card-header class="section-data">
+              علاقته بالكنيسة
+            </ion-card-header>
+            <ion-card-content>
+              <ion-row>
+                <ion-col class="address-data" col-9>{{detailData.churchAndSpiritualInfo.class}} </ion-col>
+                <ion-col class="address-label" col-3>الفصل</ion-col>
+                <ion-col class="address-data" col-9>{{detailData.churchAndSpiritualInfo.fatherOfConfession}}</ion-col>
+                <ion-col class="address-label" col-3>اب الاعتراف</ion-col>
+                <ion-col class="address-data" col-9>{{detailData.churchAndSpiritualInfo.servantFollowing}}</ion-col>
+                <ion-col class="address-label" col-3>خادم المتابعة</ion-col>
+                <ion-col class="address-data" col-9>{{detailData.churchAndSpiritualInfo.chomosya}} </ion-col>
+                <ion-col class="address-label" col-3>الشموسية</ion-col>
+                <ion-col class="address-data" col-9>{{detailData.churchAndSpiritualInfo.Notes}} </ion-col>
+                <ion-col class="address-label" col-3>نوته</ion-col>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>
+
+        </ion-row>
+      </ion-col>
+
+      <!-- basic info section -->
+   <ion-col col-12>
+      <ion-row>
+        <ion-card>
+          <ion-card-header class="section-data">
+            معلومات شخصية
+          </ion-card-header>
+          <ion-card-content>
+            <ion-row>
+              <ion-col class="address-data" col-9>{{detailData.personalInfo.school}} </ion-col>
+              <ion-col class="address-label" col-3>المدرسة</ion-col>
+              <ion-col class="address-data" col-9>{{detailData.personalInfo.birthDate}}</ion-col>
+              <ion-col class="address-label" col-3>الميلاد</ion-col>
+              <ion-col class="address-data" col-9>{{detailData.personalInfo.onlineInfo.facebook}}</ion-col>
+              <ion-col class="address-label" col-3>Facebook</ion-col>
+              <ion-col class="address-data" col-9>{{detailData.personalInfo.onlineInfo.email}} </ion-col>
+              <ion-col class="address-label" col-3>Email</ion-col>
+
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-row>
+    </ion-col>
     </ion-row>
 
 
