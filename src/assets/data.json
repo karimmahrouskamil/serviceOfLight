@@ -32,4 +32,74 @@
   },
   "DateOfCreation": "2017-08-24T00:00:00.000Z",
   "__v": 0
+},
+{
+  "_id": "5beef7c505d39728a7c046e0",
+  "personalInfo": {
+    "name": "مارك امير",
+    "address": {
+      "buildingNumber": "٧",
+      "streetName": "شارع الجميل من حبيب شلبي",
+      "floorNumber": "١٠",
+      "flatNumber": "٨",
+      "zone": "B",
+      "remarks": "اخر باب علي الشمال"
+    },
+    "Mobiles": {
+      "MobilePhone": "01005776552",
+      "HomePhone": "259280763",
+      "fatherPhone": "01005776552",
+      "motherPhone": "01005776552"
+    },
+    "school": "de la salle",
+    "birthDate": "2000-08-24T00:00:00.000Z",
+    "onlineInfo": {
+      "facebook": "karim ",
+      "email": "kkamil@eg"
+    }
+  },
+  "churchAndSpiritualInfo": {
+    "class": "2",
+    "fatherOfConfession": "ابونا يوسف",
+    "servantFollowing": "ا / باسم مكرم",
+    "chomosya": "ابصلتص",
+    "Notes": "معلومات عن الشخص"
+  },
+  "DateOfCreation": "2017-08-24T00:00:00.000Z",
+  "__v": 0
+},
+{
+  "_id": "5beef7c505d39728a7c046e0",
+  "personalInfo": {
+    "name": "فادي فهمي",
+    "address": {
+      "buildingNumber": "٧",
+      "streetName": "شارع الجميل من حبيب شلبي",
+      "floorNumber": "١٠",
+      "flatNumber": "٨",
+      "zone": "B",
+      "remarks": "اخر باب علي الشمال"
+    },
+    "Mobiles": {
+      "MobilePhone": "01005776552",
+      "HomePhone": "259280763",
+      "fatherPhone": "01005776552",
+      "motherPhone": "01005776552"
+    },
+    "school": "de la salle",
+    "birthDate": "2000-08-24T00:00:00.000Z",
+    "onlineInfo": {
+      "facebook": "karim ",
+      "email": "kkamil@eg"
+    }
+  },
+  "churchAndSpiritualInfo": {
+    "class": "3",
+    "fatherOfConfession": "ابونا يوسف",
+    "servantFollowing": "ا / باسم مكرم",
+    "chomosya": "ابصلتص",
+    "Notes": "معلومات عن الشخص"
+  },
+  "DateOfCreation": "2017-08-24T00:00:00.000Z",
+  "__v": 0
 }]
