@@ -1,12 +1,12 @@
 [{
   "_id": "5beef7c505d39728a7c046e0",
   "personalInfo": {
-    "name": "مينا سلوي",
+    "name": "مينا جورج",
     "address": {
-      "buildingNumber": "5",
-      "streetName": "Lololoalaoao",
-      "floorNumber": 32,
-      "flatNumber": 12,
+      "buildingNumber": "٧",
+      "streetName": "شارع الجميل من حبيب شلبي",
+      "floorNumber": "١٠",
+      "flatNumber": "٨",
       "zone": "B",
       "remarks": "left"
     },
