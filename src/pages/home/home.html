@@ -3,7 +3,7 @@
 
 
     <ion-refresher (ionRefresh)="doRefresh($event)">
-      <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+      <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" >
       </ion-refresher-content>
     </ion-refresher>
 
@@ -11,9 +11,9 @@
     <ion-fab bottom right>
       <button ion-fab mini>filter</button>
       <ion-fab-list side="top">
-        <button ion-fab (click)="filterPerClass('1')">Oula</button>
-        <button ion-fab (click)="filterPerClass('2')">tanya</button>
-        <button ion-fab (click)="filterPerClass('3')">talta</button>
+        <button ion-fab (click)="filterPerClass('1')">اولي</button>
+        <button ion-fab (click)="filterPerClass('2')">تانية</button>
+        <button ion-fab (click)="filterPerClass('3')">تالتة</button>
       </ion-fab-list>
 
     </ion-fab>
@@ -22,7 +22,7 @@
         <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>Makhdoumin List</ion-title>
+        <ion-title>قائمة المخدومين</ion-title>
       </ion-navbar>
     </ion-col>
     <ion-col col-12>
