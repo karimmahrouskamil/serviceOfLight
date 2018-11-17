@@ -93,29 +93,31 @@
       </ion-col>
 
       <!-- basic info section -->
-   <ion-col col-12>
-      <ion-row>
-        <ion-card>
-          <ion-card-header class="section-data">
-            معلومات شخصية
-          </ion-card-header>
-          <ion-card-content>
-            <ion-row>
-              <ion-col class="address-data" col-9>{{detailData.personalInfo.school}} </ion-col>
-              <ion-col class="address-label" col-3>المدرسة</ion-col>
-              <ion-col class="address-data" col-9>{{detailData.personalInfo.birthDate}}</ion-col>
-              <ion-col class="address-label" col-3>الميلاد</ion-col>
-              <ion-col class="address-data" col-9>{{detailData.personalInfo.onlineInfo.facebook}}</ion-col>
-              <ion-col class="address-label" col-3>Facebook</ion-col>
-              <ion-col class="address-data" col-9>{{detailData.personalInfo.onlineInfo.email}} </ion-col>
-              <ion-col class="address-label" col-3>Email</ion-col>
+      <ion-col col-12>
+        <ion-row>
+          <ion-card>
+            <ion-card-header class="section-data">
+              معلومات شخصية
+            </ion-card-header>
+            <ion-card-content>
+              <ion-row>
+                <ion-col class="address-data" col-9>{{detailData.personalInfo.school}} </ion-col>
+                <ion-col class="address-label" col-3>المدرسة</ion-col>
+                <ion-col class="address-data" col-9>
+                  <ion-datetime displayFormat="DD-MMMM-YYYY" [(ngModel)]="detailData.personalInfo.birthDate"></ion-datetime>
+                </ion-col>
+                <ion-col class="address-label" col-3>الميلاد</ion-col>
+                <ion-col class="address-data" col-9>{{detailData.personalInfo.onlineInfo.facebook}}</ion-col>
+                <ion-col class="address-label" col-3>Facebook</ion-col>
+                <ion-col class="address-data" col-9>{{detailData.personalInfo.onlineInfo.email}} </ion-col>
+                <ion-col class="address-label" col-3>Email</ion-col>
 
-            </ion-row>
-          </ion-card-content>
-        </ion-card>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>
 
-      </ion-row>
-    </ion-col>
+        </ion-row>
+      </ion-col>
     </ion-row>
 
 
