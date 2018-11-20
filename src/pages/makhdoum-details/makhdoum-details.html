@@ -104,7 +104,7 @@
                 <ion-col class="address-data" col-8>{{detailData.personalInfo.school}} </ion-col>
                 <ion-col class="address-label" col-4>المدرسة</ion-col>
                 <ion-col class="address-data" col-8>
-                  <ion-datetime displayFormat="DD-MMMM-YYYY" [(ngModel)]="detailData.personalInfo.birthDate"></ion-datetime>
+                  <ion-datetime displayFormat="DD-MMMM-YYYY" [(ngModel)]="detailData.personalInfo.birthDate.$date"></ion-datetime>
                 </ion-col>
                 <ion-col class="address-label" col-4>الميلاد</ion-col>
                 <ion-col class="address-data" col-8>{{detailData.personalInfo.onlineInfo.facebook}}</ion-col>
