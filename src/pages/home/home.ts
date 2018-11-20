@@ -13,11 +13,13 @@ import { Http } from "@angular/http";
 })
 export class HomePage {
   _mahdouminService: any;
+
   makhdouminList: [MakhdominProvider];
   _makhdouminList: any;
   searchQuery: string = "";
   filterClassVal: string = "";
   filterQueryString: string = "";
+  searchInputTextModel : string = "";
   constructor(
     public navCtrl: NavController,
     mahdouminService: MakhdominServiceProvider,
@@ -30,6 +32,7 @@ export class HomePage {
   }
 
   initializeData() {
+    this.searchInputTextModel = ""
     this.filterClassVal = "";
     this.filterQueryString = "";
     this._mahdouminService.getMakhdouminData().then(data => {

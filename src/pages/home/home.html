@@ -29,7 +29,7 @@
 
       <ion-list>
         <ion-list-header>
-          <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+          <ion-searchbar (ionInput)="getItems($event)"[(ngModel)]="searchInputTextModel" ></ion-searchbar>
         </ion-list-header>
         <ion-item-sliding *ngFor="let oneMakhdoum of makhdouminList" (click)="passDetailOfMakhdoum(oneMakhdoum)">
           <ion-item>
