@@ -8,15 +8,7 @@
     </ion-refresher>
 
 
-    <ion-fab bottom right>
-      <button ion-fab mini>filter</button>
-      <ion-fab-list side="top">
-        <button ion-fab (click)="filterPerClass('1')">اولي</button>
-        <button ion-fab (click)="filterPerClass('2')">تانية</button>
-        <button ion-fab (click)="filterPerClass('3')">تالتة</button>
-      </ion-fab-list>
 
-    </ion-fab>
     <ion-col col-12>
       <ion-navbar>
         <button ion-button menuToggle>
@@ -49,4 +41,13 @@
       </ion-list>
     </ion-col>
   </ion-row>
+  <ion-fab bottom right>
+    <button ion-fab mini>filter</button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)="filterPerClass('1')">اولي</button>
+      <button ion-fab (click)="filterPerClass('2')">تانية</button>
+      <button ion-fab (click)="filterPerClass('3')">تالتة</button>
+    </ion-fab-list>
+
+  </ion-fab>
 </ion-content>
